@@ -40,8 +40,6 @@ function PostDetail() {
 
   const handleEditPost = (evt) => {
     evt.preventDefault();
-    console.log(evt.target.value);
-    console.log(formContent);
     fetch("http://localhost:7070/posts", {
       method: "POST",
       body: JSON.stringify({ id: postId, content: formContent }),
